@@ -1,0 +1,9 @@
+bin/Debug
+
+bin/Release/*
+# don't ignore the package file
+!bin/Release/*.nupkg
+obj
+weaveapi/bin
+weaveapi/obj
+weaveapi/.idea
