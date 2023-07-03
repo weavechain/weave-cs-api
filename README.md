@@ -3,8 +3,8 @@
 [https://weavechain.com](https://weavechain.com): Layer-0 For Data
 
 #### How to install
-```sh
-nuget install weave-csharp-api
+```shell
+dotnet add package weave-cs-api
 ```
 
 #### Data read sample
@@ -33,9 +33,8 @@ public abstract class Main
 
         var organization = "weavedemo";
         var scope = "shared";
-        var account = pub;
         var table = "directory";
-        var session = await api.Login(organization, account, scope);
+        var session = await api.Login(organization, pub, scope);
 
         var readRes = await api.Read(session, scope, table, Filter.NONE, ReadOptions.Default);
         Console.WriteLine(readRes);
